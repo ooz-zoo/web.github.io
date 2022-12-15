@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>Personal Portfolio</title>
+        <!link rel="stylesheet" type="text/css" href="C:\APT 1040\Student Reg Form\styling.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Sono:wght@200&display=swap" rel="stylesheet">
+    
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" 
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" 
+        crossorigin="anonymous" referrerpolicy="no-referrer"/>
+
+    </head>
+    <body>
+        <style>
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Sono', sans-serif;
+    text-decoration: none;
+}
+body {
+    overflow-x: hidden;
+    color: greenyellow;
+}
+a {
+    color: greenyellow;
+}
+
+.main-width {
+    width: 1280px;
+    max-width: 95%;
+    margin: 0 auto;
+    padding: 0px 20px;
+}
+.hero {
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+    background: gray;
+    background-size: cover;
+    background-position: center;
+    position: relative;   
+}
+header{
+    padding: 40px 0 30px;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo i{
+     height: 55px;
+     width: 55px;
+     background: transparent;
+     border: 2px solid #2ecc71;
+     color: #2ecc71;
+     border-radius: 50%;
+     display: inline-flex;
+     align-items: center;
+     justify-content: center;
+     font-size: 20px;
+     cursor: pointer;
+}
+nav .hamb{
+     width: 35px;
+     height: 24px;
+     right: 3%;
+     top: 60px;
+     z-index: 5;
+     background: transparent;
+     position: absolute; 
+     cursor: pointer;
+     display: none;
+}
+nav .hamb span{
+    display: block;
+    background: #2ecc71;
+    width: 100%;
+    height: 3px;
+    transition: .3s;
+    transition-property: transform,opacity;
+}
+nav .hamb span:nth-child(2){
+    margin: 7px 0px;
+}
+nav .nav-list{
+    list-style: none;
+}
+
+nav .nav-list li{
+    display: inline-block;
+    cursor: pointer;
+}
+nav .nav-list li:not(:last-child) a:hover{
+    color: #2ecc71;
+    transition: .4s;
+}
+nav .nav-list li.btn a{
+    display: inline-block;
+    background: transparent;
+    border: 2px solid #2ecc71;
+    padding: 9px 28px;
+    border-radius: 30px;
+    line-height: 1.3;
+    color: #2ecc71;
+    font-weight: 500;
+}
+nav .nav-list li.btn:hover a{
+    background: #2ecc71;
+    color: white;
+    border: 2px solid transparent;
+    transition: .4s;
+}
+.container{
+    padding-top: 190px;
+}
+.container .hero-text{
+    margin-bottom: 4opx;
+}
+.container .hero-text h4{
+    color: white;
+    font-size: 47px;
+    font-weight: 900;
+    line-height: 1.2;
+    margin: 20px 0 20px;
+}
+span{
+    color: black;
+}
+.container .hero-text h3{
+    color: #eee;
+    font-weight: 400;
+    font-size: 17px;
+}
+.container .hero-text p{
+    width: 900px;
+    max-width: 100%;
+    color: #eee;
+    font-size: 15px;
+    line-height: 1.5;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+}
+.social a{
+    width: 36px;
+    height:36px;
+    
+    
+    align-items: center;
+    font-size: 24px;
+    color: #eee;
+    cursor: pointer;
+    margin-right: 20px;
+    background-color: rgba(255, 255, 255, 0.1);
+    margin-bottom: 35px;
+}
+.social a:hover{
+    transform: scale(1.1);
+    background: #2ecc71;
+    transition: .4s;
+}
+.btn button{
+    color: #eee;
+    background: #2ecc71;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    padding: 8px 30px;
+    border: 2px solid #2ecc71;
+    border-radius: 30px;
+    cursor: pointer;
+}
+.btn button:hover{
+    background: transparent;
+    border: 2px solid #2ecc71;
+    color: #2ecc71;
+    transition: .4s;
+}
+.bottom {
+    margin-top: 243px;
+    padding-bottom: 40px;
+}
+.bottom p{
+    color: #eee;
+    letter-spacing: 2px;
+    font-size: 15px;
+}
+
+@media screen and (max-width: 930px) {
+    nav .hamb{
+        display: initial;
+    }
+    .click{
+        top: 46px;
+    }
+    .click span{
+        position: absolute;
+        margin-top: 12px;
+    }
+    .click span:first-child{
+        transform: rotate(-40deg);
+    }
+    .click span:nth-child(2){
+        opacity: 0;
+        margin: 0; 
+    }
+    .click span:last-child{
+        transform: rotate(40deg);
+        top: 0;
+    }
+    nav .nav-list{
+        position: absolute;
+        top: 90px;
+        right: -65%;
+        bottom: 0;
+        width: 60%;
+        height: 50%;
+        background: black;
+        padding: 6% 9%;
+        transition: .3s right;
+        border-radius: 10px;
+    }
+    nav .nav-list li{
+        display: block;
+    }
+    nav .nav-list li a{
+        display: block;
+        text-align: center;
+        font-size: 25px;
+        font-weight: 400;
+        margin-left: 0;
+        margin-bottom: 40px;
+    }
+    nav .nav-list li.btn a{
+        position: absolute;
+        margin-bottom: 20px;
+        right: 20%;
+        left: 20%;
+        padding: 7px 15px;
+        font-size: 14px;
+    }
+    nav .nav-list.open{
+        right: 0;
+    }
+}
+
+h2{
+    color: white;
+    font-weight: 700;
+    margin-top: 125px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    line-height: 23px;
+}
+h2 span{
+    color: greenyellow;
+}
+.process-wrapper{
+    margin: auto;
+    max-width: 1080px;
+}
+
+#progress-bar-container{
+    position: relative;
+    width: 90%;
+    margin: auto;
+    height: 100px;
+    margin-top: 59px;
+}
+
+#progress-bar-container ul{
+    padding: 0;
+    margin: 0;
+    padding-top: 15px;
+    z-index: 9999;
+    position: absolute;
+    width: 100%;
+    margin-top: -40px;
+}
+
+#progress-bar-container li:before{
+    content: "";
+    display: block;
+    margin: auto;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: solid 2px #aaa;
+    transition: all ease 0.3s;
+}
+
+#progress-bar-container li.active:before,
+#progress-bar-container li:hover:before{
+    background: greenyellow;  
+}
+
+#progress-bar-container li{
+    list-style: none;
+    float: left;
+    width: 20%;
+    text-align: center;
+    color: #aaa;
+    text-transform: uppercase;
+    font-size: 11px;
+    cursor: pointer;
+    font-weight: 700;
+    transition: all ease 0.2s;
+    vertical-align: bottom;
+    height: 59px;
+    position: relative;
+}
+
+#progress-bar-container li .step-inner{
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    font-size: 14px;
+}
+
+#progress-bar-container li.active,
+#progress-bar-container li:hover{
+    color: greenyellow;
+}
+
+#progress-bar-container li:after{
+    content: "";
+    display: block;
+    width: 5px;
+    height: 5px;
+    background: #777;
+    margin: auto;
+    border: solid 7px white;
+    border-radius: 50%;
+    margin-top: 40px;
+    box-shadow: 0 2px 13px -1px rgba(0,0,0,0.3);
+    transition: all ease 0.2s;
+} 
+
+#progress-bar-container li:hover:after{
+    background: greenyellow;
+}
+
+#progress-bar-container li:active:after{
+    background: greenyellow;
+}
+
+#progress-bar-container #line{
+    width: 80%;
+    margin: auto;
+    background: #eee;
+    height: 5px;
+    position: absolute;
+    left: 10%;
+    top: 57px;
+    z-index: 1;
+    border-radius: 50px;
+    transition: all ease 0.9s;
+}
+
+#progress-bar-container #line-progress{
+    content: "";
+    width: 3%;
+    height: 100%;
+    background: greenyellow;
+    background: linear-gradient(to right, deepskyblue 0%, #2ea3b7 100%);
+    position: absolute;
+    z-index: 2;
+    border-radius: 50px;
+    transition: all ease 0.9s;  
+}
+
+
+#progress-content-section{
+    width: 90%;
+    margin: auto;
+    background: black;
+    border-radius: 4px;
+}
+#progress-content-section .section-content{
+    padding: 30px 40px;
+    text-align: center; 
+}
+#progress-content-section .section-content h4 {
+	font-size:17px;
+	text-transform:uppercase;
+	color:#333;
+	letter-spacing:1px;
+}
+
+#progress-content-section .section-content p {
+	font-size:16px;
+	line-height:1.8em;
+	color: white;
+}
+
+#progress-content-section .section-content {
+	display:none;
+	animation: FadeInUp 700ms ease 1;
+	animation-fill-mode:forwards;
+	transform:translateY(15px);
+	opacity:0;
+}
+
+#progress-content-section .section-content.active {
+	display:block;
+}
+
+@keyframes FadeInUp {
+	0% {
+		transform:translateY(15px);
+		opacity:0;
+	}
+	
+	100% {
+		transform:translateY(0px);
+		opacity:1;
+	}
+}
+
+        </style>
+        <section class="hero">
+            <div class="main-width">
+                <header>
+                    <div class="logo">
+                        <i class="fa-solid fa-j"></i>
+                    </div>
+                    <nav>
+                        <div class="hamb">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                         </div>
+
+                        <ul class="nav-list">
+                            <li><a href="#">Teaching</a></li>
+                            <li><a href="#">Research </a></li>
+                            <li><a href="#">Mentorship</a></li>
+                            <li class="btn"><a href="contactme.html">Contact Me</a></li>
+                        </ul>
+                    </nav>
+                </header>
+                    <div class="container">
+                        <div class="hero-text">
+                            <h5>Hi, There!</h5> <br>
+                            <h5>I Am <span class="input"></span></h5><br>
+                            <p>
+                                A lecturer at United States International University- Africa, School of Science and Technology. 
+                                I teach data science modules at undergraduate level at USIU-A . <br> <br>
+                                Apart from Academic work I am practising data analytics and research consultant at SIME Lab and UKZN.
+                                I have been involved in various data science consulting work for public  and private organizations in Africa and Asia. <br><br>
+                                Furthermore i have been involved in external audits for private and governemental organizations at KKCO East Africa 
+                                Outside my professional obligations, I am a Co-Founder and Program Lead at Niwebora mentorship program. <br><br>
+                                The program seeks to instill global thinking and servant leadership to first and second year students in Kenyan universities.
+                                Presently i run the program with a team of four individuals from different fields<br>
+                            </p>
+                            <div class="social">
+                                <a href="https://twitter.com/IsrumK1?s=20&t=QdOcEsEh2UaoCsFpZ2qv-Q"><i class="fa-brands fa-twitter"></i></a>
+                                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                            </div> <br>
+                           
+                        </div>
+
+                        <h2>MY <span>JOURNEY</span></h2>
+                        <div class="process-wrapper">
+                            <div id="progress-bar-container">
+                                <ul>
+                                    <li class="step step01 active"><div class="step-inner">2008</div></li>
+                                    <li class="step step02"><div class="step-inner">2013</div></li>
+                                    
+                                    <li class="step step03"><div class="step-inner">2015</div></li>
+                                    
+                                    <li class="step step04"><div class="step-inner">2017</div></li>
+                                    
+                                    <li class="step step05"><div class="step-inner">2022</div></li>  
+                                </ul>
+
+                                <div id="line">
+                                    <div id="line-progress"></div>
+                                </div>
+                            </div>
+                            <div id="progress-content-section">
+                                <div class="section-content discovery active">
+                                    <h4>...</h4>
+                                    <p>
+                                        BCom. Management Information Systems Daystar University.
+                                    </p>
+                                </div>
+
+                                <div class="section-content strategy">
+                                    <h4>...</h4>
+                                    <p>
+                                        MSc. Information Technology, Strathmore Unviersity, Kenya.
+                                    </p>
+                                </div>
+
+                                
+                                <div class="section-content creative">
+                                    <h4>...</h4>
+                                    <p>
+                                        KASNEB-CPA Finalist
+                                    </p>
+                                </div>
+
+                                <div class="section-content production">
+                                    <h4>...</h4>
+                                    <p>
+                                       Ph.D. Information Systems (NLP), UKZN,South Africa.
+                                    </p>
+                                </div>
+
+                                <div class="section-content analysis">
+                                    <h4>...</h4>
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
+                                        incididunt ut labore et dolore. 
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+                        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+                         <script>
+    
+                                $(".step").click( function() {
+                                $(this).addClass("active").prevAll().addClass("active");
+                                $(this).nextAll().removeClass("active");
+                            });
+
+                            $(".step01").click( function() {
+                                $("#line-progress").css("width", "3%");
+                                $(".discovery").addClass("active").siblings().removeClass("active");
+                            });
+
+                            $(".step02").click( function() {
+                                $("#line-progress").css("width", "25%");
+                                $(".strategy").addClass("active").siblings().removeClass("active");
+                            });
+
+                            $(".step03").click( function() {
+                                $("#line-progress").css("width", "50%");
+                                $(".creative").addClass("active").siblings().removeClass("active");
+                            });
+
+                            $(".step04").click( function() {
+                                $("#line-progress").css("width", "75%");
+                                $(".production").addClass("active").siblings().removeClass("active");
+                            });
+
+                            $(".step05").click( function() {
+                                $("#line-progress").css("width", "100%");
+                                $(".analysis").addClass("active").siblings().removeClass("active");
+                            });
+
+ 
+                        </script>
+                        <div class="btn">
+                        <br><a href="#"><button type="button">More About Me</button></a>
+                        </div>
+                        <div class="bottom">
+                            <p>© 2022 Maleck - All Rights Reserved.</p>
+                        </div>
+
+                    </div>
+            </div>
+        </section>
+
+        <script type="text/javascript">
+            var hambu = document.querySelector(".hamb");
+            var navlist = document.querySelector(".nav-list");
+            var links = document.querySelector(".nav-list li");
+
+            hambu.addEventListener("click", function(){
+            this.classList.toggle("click");
+            navlist.classList.toggle("open");
+});
+
+        </script>
+
+        <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+        <script>
+            var typed = new Typed(".input", {
+                strings:["Japheth Mursi.", "A Professor.", "A Data Analyst."],
+                typeSpeed: 70,
+                backspeed: 60,
+                loop:true
+            });
+        </script>
+    </body>
+    </html> 
