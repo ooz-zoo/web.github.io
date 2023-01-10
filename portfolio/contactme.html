@@ -1,0 +1,133 @@
+ <!DOCTYPE HTML>
+ <html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width", initial-scale="1.0">
+        <title>Contact Me</title>
+        <!link rel="stylesheet" type="text/css" href="contactstyling.css">
+        
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Sono:wght@200;600&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <style type="text/css">
+            *{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Sono', sans-serif;
+    align-content: center;
+}
+section{
+    padding: 40px 15%;
+}
+.contact{
+    background: #101010;
+    height: 100%;
+    width: 100%;
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(2, 2fr);
+    align-items: center;
+    grid-gap: 6rem;
+}
+
+.contact-form h1{
+    font-size: 60px;
+    color: #fff;
+    margin-bottom: 20px;
+}
+span{
+    color: green;
+}
+.contact-form p{
+    color: #c6c9d8bf;
+    letter-spacing: 1px;
+    line-height: 26px;
+    font-size: 1.1rem;
+    margin-bottom: 3.8rem;
+}
+.contact-form form{
+     position: relative;
+}
+.contact-form form input,
+form textarea{
+    width: 100%;
+    padding: 17px;
+    border: none;
+    outline: none;
+    background: #191919;
+    color: #fff;
+    font-size: 1.1rem;
+    margin-bottom: 0.7rem;
+    border-radius: 10px;
+}
+.contact-form textarea{
+    resize: none;
+    height: 200px;
+}
+.contact-form form .btn{
+    display: inline-block;
+    background: green;
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-weight: 600;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    width: 220px;
+    transition: ease .20s;
+    cursor: pointer;
+}
+.contact-form form .btn:hover{
+    border: 2px solid green;
+    background: transparent;
+    transform: scale(1.1);
+}
+
+@media (max-width: 1570px){
+    section{
+        padding: 80px 3%;
+        transition: .2s;
+    }
+    .contact-form h1{
+        font-size: 60px;
+    }
+    .contact-form p{
+        margin-bottom: 3rem;
+    }
+}
+@media (max-width: 1090px){
+    .contact{
+        grid-gap: 2rem;
+        transition: .3s;
+    }
+}
+@media (max-width: 1000px){
+    .contact{
+        grid-template-columns: 1fr;
+    }
+    .contact-form{
+        order: 2;
+    }
+}
+        </style>
+        <section class="contact">
+            <div class="contact-form">
+                <h1>Contact <span>Me</span></h1>
+                <p>Contact me via email: mursijapheth@gmail.com or via whatsapp: +254 710 469 003</p>
+                <form action="MAILTO:mursijapheth@gmail.com" method="post" enctype="text/plain"> <!--gotta change it to prof's email-->
+                    <input type="Name" id="Name" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="email" id="email" placeholder="E-mail" required maxlength="100">
+                    <input type="Subject" id="Subject" name="Subject" placeholder="Write the Message Subject" required></input>
+                    <textarea name="Message" id="Message" name= "Message" cols="30" rows="10" placeholder="Your Message" required>
+
+                    </textarea>
+                    <input type="reset" value="reset" class="btn">
+                    <input type="submit" name="" value="Submit" class="btn">
+                </form>
+            </div>
+        </section>
+    </body>
+ </html>

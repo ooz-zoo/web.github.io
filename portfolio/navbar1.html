@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <title>Navigation Bar</title>
+        <meta name="viewport" content="width=device-width", initial-sclae="1.0">
+        <meta charset="utf-8">
+        
+        
+    </head>
+    <style>
+
+        *
+        {
+            padding: 0;
+            margin: 0;
+            text-decoration: none;
+            list-style: none;
+        }
+
+        body{
+            font-family: 'Sono' sans-serif;
+        }
+        nav{
+            height: 80px;
+            width: 100%;
+            background: peachpuff;
+        }
+        label.logo{
+            font-size: 35px;
+            font-weight: bold;
+            color: white;
+            padding: 0 100px;
+            line-height: 80px;
+        }
+        nav ul{
+            float: right;
+            margin-right: 40px;
+        }
+        nav li{
+            display: inline-block;
+            margin: 0 8px;
+            line-height: 80px;
+        }
+        nav a{
+            color: white;
+            font-size: 18px;
+            text-transform: uppercase;
+            border: 1px solid transparent;
+            padding: 7px 10px;
+            border-radius: 3px;
+        }
+        a.active,a:hover{
+            border: 1px solid white;
+            transition: .5s;
+        }
+        .checkbtn{
+  font-size: 30px;
+  color: black;
+  float: right;
+  line-height: 80px;
+  margin-right: 40px;
+  cursor: pointer;
+  display: none;
+}
+#check{
+  display: none;
+}
+@media (max-width: 952px){
+  label.logo{
+    font-size: 30px;
+    padding-left: 50px;
+  }
+  nav ul li a{
+    font-size: 16px;
+  }
+}
+@media (max-width: 858px){
+  .checkbtn{
+    display: block;
+  }
+  ul{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: peachpuff;
+    top: 80px;
+    left: -100%;
+    text-align: center;
+    transition: all .5s;
+  }
+  nav ul li{
+    display: block;
+    margin: 50px 0;
+    line-height: 30px;
+  }
+  nav ul li a{
+    font-size: 20px;
+  }
+  a:hover,a.active{
+    background: none;
+    color: black;
+  }
+  #check:checked ~ ul{
+    left: 0;
+  }
+}
+
+        
+       
+    </style>
+    <body>
+        <nav>
+            <label class="logo">JM</label>
+            <ul>
+                <li><a class="active" href="finalindex.html">Welcome</a></li>
+                <li><a href="main-timeline.html">Teaching</a></li>
+                <li><a href="research.html">Research</a></li>
+                <li><a href="mentor.html">Mentorship</a></li>
+                <li><a href="social-media.html">Digital Footprint</a></li>
+                <li class="btn"><a href="contactme.html">Contact Me</a></li>
+
+            </ul>
+        
+            <label class="button bars" for="check"><i class="fas fa-bars"></i></label>
+
+        </nav>
+        
+    </body>
+</html>

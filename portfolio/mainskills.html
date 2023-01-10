@@ -1,0 +1,158 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Skills</title>
+    </head>
+    <style>
+*
+{
+    background: black;
+}
+
+.skill-section
+{
+    position: relative;
+    margin: 100px 0;
+}
+
+.heading
+{
+    text-align: center;
+    font-size: 60px;
+    color: #fff;
+    text-transform: capitalize;
+    font-weight: 300;
+    margin-bottom: 100px;
+}
+ 
+.skills-container
+{
+    width: 95%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 100px;
+    color: #fff;
+}
+
+.skill-card
+{
+    position: relative;
+}
+
+.skill-img
+{
+    display: block;
+    margin: auto;
+    height: 200px;
+}
+
+.skill-name 
+{
+    font-size: 30px;
+    font-weight: 300;
+    text-align: center;
+    text-transform: capitalize;
+    margin: 30px 0 20px;
+}
+
+.skill-info
+{
+    text-align: center;
+    opacity: 0.5;
+    font-size: 18px;
+    line-height: 30px;
+}
+
+.skill-level
+{
+    position: absolute;
+    top: 80px;
+    right: 0;
+    width: 110px;
+    height: 110px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 22px;
+    border-radius: 50%;
+    border: 5px solid;
+    background: transparent;
+}
+
+.skill-card:nth-child(1) .skill-level
+{
+    background: #ff4f4f28;
+    border-color: #ff4f4f;
+    color: #ff4f4f;
+}
+
+.skill-card:nth-child(2) .skill-level
+{
+    background: transparent;
+    border-color: whitesmoke;
+    color: whitesmoke;
+    width: auto;
+    height: auto;
+}
+
+.skill-card:nth-child(3) .skill-level
+{
+    background: #ffed4f28;
+    border-color: yellow;
+    color: yellow;
+}
+
+.skill-card:nth-child(4) .skill-level
+{
+    background: #52ff4f28;
+    border-color: greenyellow;
+    color: greenyellow;
+}
+
+.skill-card:nth-child(5) .skill-level
+{
+    background: #4fdfff28;
+    border-color: turquoise;
+    color: turquoise;
+}
+    </style>
+    <body>
+        <div class="skill-section">
+            <h1 class="heading">skills</h1>
+            <div class="skills-container">
+                <div class="skill-card">
+                    <img src="py.png" class="skill-img" alt="">
+                    <div class="skill-level">98%</div>
+                    <h1 class="skill-name">PYTHON</h1>
+                    <p class="skill-info">Lorem ipsum dolor, sit AEKUeab</p>
+                </div>
+                <div class="skill-card">
+                    <img src="R.png" class="skill-img" alt="">
+                    <div class="skill-level">98%</div>
+                    <h1 class="skill-name">R</h1>
+                    <p class="skill-info">Lorem ipsum dolor, sit AEKUeab</p>
+                </div>
+                <div class="skill-card">
+                    <img src="sql.png" class="skill-img" alt="">
+                    <div class="skill-level">98%</div>
+                    <h1 class="skill-name">SQL</h1>
+                    <p class="skill-info">Lorem ipsum dolor, sit AEKUeab</p>
+                </div>
+                <div class="skill-card">
+                    <img src="icons8-tableau-software-100 (1).png" class="skill-img" alt="">
+                    <div class="skill-level">98%</div>
+                    <h1 class="skill-name">TABLEAU</h1>
+                    <p class="skill-info">Lorem ipsum dolor, sit AEKUeab</p>
+                </div>
+                <div class="skill-card">
+                    <img src="pobi.jpg" class="skill-img" alt="">
+                    <div class="skill-level">98%</div>
+                    <h1 class="skill-name">POWER BI</h1>
+                    <p class="skill-info">Lorem ipsum dolor, sit AEKUeab</p>
+                </div>
+            </div>
+        </div>
+    </body>
+</html> 

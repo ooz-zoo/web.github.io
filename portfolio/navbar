@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Navigation Bar</title>
+        <meta name="viewport" content="width=device-width", initial-sclae="1.0">
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <nav>
+            <label class="logo">JM</label>
+            <ul>
+                <li><a href="#">Welcome</a></li>
+                <li><a href="#">Teaching</a></li>
+                <li><a href="#">Research</a></li>
+                <li><a href="#">Mentorship</a></li>
+                <li><a href="#">Digital Footprint</a></li>
+            </ul>
+        </nav>
+        
+    </body>
+</html>

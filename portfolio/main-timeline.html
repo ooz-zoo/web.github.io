@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title> Teaching </title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Sono:wght@200;600&display=swap');
+
+*{
+	margin:0;
+	padding:0;
+	box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+	font-family: 'Sono', sans-serif;
+    background: peachpuff;
+}
+.work-heading
+{
+    text-align: center;
+    font-size: 60px;
+    color: black;
+    text-transform: capitalize;
+    font-weight: 500;
+    margin-top: 100px;
+    text-decoration-line: underline;
+    text-decoration-color: goldenrod;
+}
+
+.work-heading::before {
+  width: 100%;
+}
+.timeline-section{
+	background-color: peachpuff;
+	min-height: 100vh;
+	padding: 100px 15px;
+}
+.timeline-items{
+	max-width: 1000px;
+	margin:auto;
+	display: flex;
+	flex-wrap: wrap;
+	position: relative;
+}
+.timeline-items::before{
+	content: '';
+	position: absolute;
+	width: 2px;
+	height: 100%;
+	background-color: white;
+	left: calc(50% - 1px);
+    animation: moveline 6s linear forwards; /*allows for the middle line to move as it goes forward*/
+}
+
+@keyframes moveline
+{
+    0%{
+        height: 0;
+    }
+    100%{
+        height: 100%;
+    }
+}
+
+.timeline-item
+{
+    position: 10px 50px;
+    position: relative;
+    width: 50%;
+    animation: movedown 1s linear forwards; /*makes the entire container move down*/
+    opacity: 0;
+}
+
+@keyframes movedown
+{
+    0%
+    {
+        opacity: 1;
+        transform: translateY(-30px);
+    }
+    100%
+    {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+
+}
+
+/* nth-child represents the different timelines in the container each will appear after the given time */
+.timeline-item:nth-child(1)
+{
+    animation-delay: 0s;
+}
+
+
+
+.timeline-item:nth-child(2)
+{
+    animation-delay: 0.5s;
+}
+
+.timeline-item:nth-child(3)
+{
+    animation-delay: 1s;
+}
+
+.timeline-item:nth-child(4)
+{
+    animation-delay: 1.5s;
+}
+.timeline-item:nth-child(5)
+{
+    animation-delay: 2s;
+}
+
+.timeline-item{
+	margin-bottom: 40px;
+	width: 100%;
+	position: relative;
+}
+.timeline-item:last-child{
+	margin-bottom: 0;
+}
+.timeline-item:nth-child(odd){
+    padding-right: calc(50% + 30px);
+	text-align: right;
+}
+.timeline-item:nth-child(even){
+    padding-left: calc(50% + 30px);
+}
+.timeline-dot{
+	height: 16px;
+	width: 16px;
+	background-color: #eaa023;
+	position: absolute;
+	left: calc(50% - 8px);
+	border-radius: 50%;
+	top:10px;
+}
+.timeline-date{
+	font-size: 18px;
+	color: black;
+	margin:6px 0 15px;
+}
+.timeline-content{
+    background-color: white;
+	padding: 30px;
+	border-radius: 5px;
+}
+.timeline-content h3{
+    font-size: 20px;
+	color: goldenrod;
+	margin:0 0 10px;
+	text-transform: capitalize;
+	font-weight: 500;
+    text-align: left;
+    word-spacing: -10px;
+}
+
+.timeline-content p{
+    color: black;
+	font-size: 16px;
+	font-weight: 300; /*can be used to make text bold*/
+    text-align: left;
+}
+
+/* responsive part */
+@media(max-width: 767px){
+	.timeline-items::before{
+		left: 7px;
+	}
+	.timeline-item:nth-child(odd){
+		padding-right: 0;
+		text-align: left;
+	}
+	.timeline-item:nth-child(odd),
+	.timeline-item:nth-child(even){
+		padding-left: 37px;
+	}
+	.timeline-dot{
+		left:0;
+	}
+}
+.container{
+    width: 380px;
+    background: white;
+    margin: 150px auto;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 2 20px 25px rgba(58, 55, 55, 0.2);
+	margin-bottom: -20px;
+    
+    
+}
+@keyframes load {
+    from{
+        width: 0%;
+
+    }
+}
+@-webkit-keyframes load{
+    from{
+        width: 0%;
+    }
+}
+
+@-moz-keyframes load{
+    from{
+        width: 0%;
+    }
+}
+
+@-o-keyframes load {
+    from{
+        width: 0%;
+    }
+}
+h1{
+    text-align: center;
+    margin-top: 30px;
+    font-size: 400%;
+    position: relative;
+    color: black;
+
+}
+h2{
+    text-align: center;
+    margin-bottom: 20px;
+    
+}
+.box{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.box li h5{
+    margin-bottom: 10px;
+}
+
+.bar{
+    height: 18px;
+    background-color: white;
+    margin-bottom: 15px;
+    border-radius: 15px;
+}
+
+.bar::before{
+    content:"";
+    background-color: palegreen;
+    display: inline-block;
+    padding: 8px;
+    border-radius: inherit;
+    animation: load 3s 0s;
+    -webkit-animation: load 3s 0s;
+    -moz-animation: load 3s 0s;
+    -o-animation: load 3s 0s;
+}
+.bar1{
+    height: 18px;
+    background-color: white;
+    margin-bottom: 15px;
+    border-radius: 15px;
+}
+.bar1::before{
+    content:"";
+    background-color: palegreen;
+    display: inline-block;
+    padding: 8px;
+    border-radius: inherit;
+    animation: load 3s 0s;
+    -webkit-animation: load 3s 0s;
+    -moz-animation: load 3s 0s;
+    -o-animation: load 3s 0s;
+}
+
+.bar.bar1::before{
+    width: calc(95% - 10px); /*allows the percentage to slide through*/
+}
+
+.bar.bar2::before{
+    width: calc(85% - 10px);
+}
+
+.bar.bar3::before{
+    width: calc(70% - 10px);
+}
+
+.bar.bar4::before{
+    width: calc(90% - 10px);
+}
+
+.bar.bar5::before{
+    width: calc(98% - 10px);
+}
+
+.bar1.bar1-1::before{
+    width: calc(85% - 10px); /*allows the percentage to slide through*/
+}
+
+.bar1.bar2-1::before{
+    width: calc(87% - 10px);
+}
+
+.bar1.bar3-1::before{
+    width: calc(90% - 10px);
+}
+
+.bar1.bar4-1::before{
+    width: calc(80% - 10px);
+}
+</style>
+<body>
+<h1 class="work-heading">teaching</h1>
+<section class="timeline-section">
+	<div class="timeline-items">
+		<div class="timeline-item">
+			<div class="timeline-dot"></div>
+			<div class="timeline-date">Jan 2022 - present</div>
+			<div class="timeline-content">
+				<h3>Lecturer - Business Analytics - United states International University</h3>
+				<p>
+                    ▪ Preparing and delivering lectures on business data analytics to undergraduate students.<br><br>
+                    ▪ Teach introduction to text analysis using R and Python.<br><br>
+                    ▪ Participate in module evaluation and assessment of students.
+                </p>
+            </div>
+		</div>
+		
+		<div class="timeline-item">
+			<div class="timeline-dot"></div>
+			<div class="timeline-date">Oct 2022 - Present</div>
+			<div class="timeline-content">
+				<h3>
+                    Certified Carpentries Instructor – The Carpentries
+                </h3>
+				<p>
+                    ▪ Plan, organise and teach Data Carpentry and Software Carpentry workshops.<br><br>
+                    ▪ Communicate material of a specialist and technical nature to both beginners and advanced 
+                    users.<br><br>
+                    ▪ Work with other Carpentries Instructors to deliver workshops.
+                </p>
+			</div>
+		</div>
+		
+		<div class="timeline-item">
+			<div class="timeline-dot"></div>
+			<div class="timeline-date">Feb 2018- May 2019 </div>
+			<div class="timeline-content">
+				<h3>Teaching Assistant – Durban University of Technology</h3>
+				<p>
+                    ▪ Modified mode of instruction to student-centered learning to foster a thorough 
+                    understanding of subject matter by students.<br><br>
+                    ▪ Tutored students individually or in small groups to help them master assignments and to 
+                    reinforce learning concepts.
+                </p>
+			</div>
+		</div>
+		
+		<div class="timeline-item">
+			<div class="timeline-dot"></div>
+			<div class="timeline-date">June 2013- June 2016 </div>
+			<div class="timeline-content">
+				<h3>Senior Audit Associate -KKCO East Africa</h3>
+				<p>
+                    ▪ Led various audit teams to conduct audits and guide clients in sealing loopholes in 
+                    operating procedures in information systems.<br><br>
+                    ▪ Provided guidance to management on risks and controls and acts as an ambassador to 
+                    promote a sound financial control environment.<br><br>
+                    ▪ Collaborated in the development of audit programs with colleagues by determining the 
+                    objective, scope and work schedule of individual audits.<br><br>
+                    ▪ Communicated audit findings to different stakeholders and presented audit reports in 
+                    board meetings.
+                </p>
+			</div>
+		</div>
+
+        <div class="timeline-item">
+			<div class="timeline-dot"></div>
+			<div class="timeline-date">Jan 2017 - Oct 2020</div>
+			<div class="timeline-content">
+				<h3>
+                    Graduate Research Assistant - University of KwaZulu-Natal 
+                </h3>
+				<p>
+                    ▪ Prepared and delivered lectures on end user computing, information security and 
+                    introduction data science modules.<br><br>
+                    ▪ Responsible for providing guidelines to students to help them complete course projects 
+                    ▪ Helped students with preparing questions for the survey, ensuring that the survey is 
+                    complete.<br><br>
+                    ▪ Trained and supervised 20 Honours students on data coding tasks, which resulted in 
+                    enhanced research productivity.<br><br>
+
+                </p>
+			</div>
+		</div>
+
+	</div>
+	<h1>Skills</h1>
+        <div class="container">
+            <h2>Technical Skills</h2>
+            <ul class="box">
+                <li>
+                    <h5>R </h5>
+                    <span class="bar bar1"></span>
+                </li>
+                <li>
+                    <h5>Python </h5>
+                    <span class="bar bar2"></span>
+                </li>
+                <li>
+                    <h5>SQL </h5>
+                    <span class="bar bar3"></span>
+                </li>
+                <li>
+                    <h5>Tableau </h5>
+                    <span class="bar bar4"></span>
+                </li>
+                <li>
+                    <h5>PowerBi</h5>
+                    <span class="bar bar5"></span>
+                </li>
+            </ul><br><br>
+            <h2>Professional Skills</h2>
+            <ul class="box">
+                <li>
+                    <h5>Effective Communication </h5>
+                    <span class="bar1 bar1-1"></span>
+                </li>
+                <li>
+                    <h5>Analytical</h5>
+                    <span class="bar1 bar2-1"></span>
+                </li>
+                <li>
+                    <h5>Numerical </h5>
+                    <span class="bar1 bar3-1"></span>
+                </li>
+                <li>
+                    <h5>Relationship Management </h5>
+                    <span class="bar1 bar4-1"></span>
+                </li>
+            </ul> 
+            
+        </div>
+</section>
+</body>
+</html>

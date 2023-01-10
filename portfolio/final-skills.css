@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Sono:wght@200;600&display=swap');
+
+*
+{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Sono', sans-serif;
+    background: peachpuff;
+}
+
+.container{
+    width: 380px;
+    background: white;
+    margin: 150px auto;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 2 20px 25px rgba(58, 55, 55, 0.2);
+    
+    
+}
+@keyframes load {
+    from{
+        width: 0%;
+
+    }
+}
+@-webkit-keyframes load{
+    from{
+        width: 0%;
+    }
+}
+
+@-moz-keyframes load{
+    from{
+        width: 0%;
+    }
+}
+
+@-o-keyframes load {
+    from{
+        width: 0%;
+    }
+}
+h1{
+    text-align: center;
+    margin-bottom: -20px;
+    font-size: 400%;
+    position: relative;
+
+}
+h2{
+    text-align: center;
+    margin-bottom: 20px;
+    
+}
+.box{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.box li h5{
+    margin-bottom: 10px;
+}
+
+.bar{
+    height: 18px;
+    background-color: white;
+    margin-bottom: 15px;
+    border-radius: 15px;
+}
+
+.bar::before{
+    content:"";
+    background-color: palegreen;
+    display: inline-block;
+    padding: 8px;
+    border-radius: inherit;
+    animation: load 3s 0s;
+    -webkit-animation: load 3s 0s;
+    -moz-animation: load 3s 0s;
+    -o-animation: load 3s 0s;
+}
+.bar1{
+    height: 18px;
+    background-color: white;
+    margin-bottom: 15px;
+    border-radius: 15px;
+}
+.bar1::before{
+    content:"";
+    background-color: palegreen;
+    display: inline-block;
+    padding: 8px;
+    border-radius: inherit;
+    animation: load 3s 0s;
+    -webkit-animation: load 3s 0s;
+    -moz-animation: load 3s 0s;
+    -o-animation: load 3s 0s;
+}
+
+.bar.bar1::before{
+    width: calc(95% - 10px); /*allows the percentage to slide through*/
+}
+
+.bar.bar2::before{
+    width: calc(85% - 10px);
+}
+
+.bar.bar3::before{
+    width: calc(70% - 10px);
+}
+
+.bar.bar4::before{
+    width: calc(90% - 10px);
+}
+
+.bar.bar5::before{
+    width: calc(98% - 10px);
+}
+
+.bar1.bar1-1::before{
+    width: calc(85% - 10px); /*allows the percentage to slide through*/
+}
+
+.bar1.bar2-1::before{
+    width: calc(87% - 10px);
+}
+
+.bar1.bar3-1::before{
+    width: calc(90% - 10px);
+}
+
+.bar1.bar4-1::before{
+    width: calc(80% - 10px);
+}

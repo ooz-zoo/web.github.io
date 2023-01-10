@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Navbar</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+  </head>
+  <body>
+    <style>
+        *{
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+body{
+  font-family: montserrat;
+}
+nav{
+  background: peachpuff;
+  height: 80px;
+  width: 100%;
+}
+label.logo{
+  color: black;
+  font-size: 35px;
+  line-height: 80px;
+  padding: 0 100px;
+  font-weight: bold;
+}
+nav ul.links{
+  float: right;
+  margin-right: 20px;
+}
+nav ul.links li{
+  display: inline-block;
+  line-height: 80px;
+  margin: 0 5px;
+}
+nav ul.links li a{
+  color: white;
+  font-size: 17px;
+  padding: 7px 13px;
+  border-radius: 3px;
+  text-transform: uppercase;
+}
+a.active,a:hover{
+  background: black;
+  transition: .5s;
+}
+.checkbtn{
+  font-size: 30px;
+  color: black;
+  float: right;
+  line-height: 80px;
+  margin-right: 40px;
+  cursor: pointer;
+  display: none;
+}
+#check{
+  display: none;
+}
+@media (max-width: 952px){
+  label.logo{
+    font-size: 30px;
+    padding-left: 50px;
+  }
+  nav ul li a{
+    font-size: 16px;
+  }
+}
+@media (max-width: 858px){
+  .checkbtn{
+    display: block;
+  }
+  ul.links{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: peachpuff;
+    top: 80px;
+    left: -100%;
+    text-align: center;
+    transition: all .5s;
+  }
+  nav ul.links li{
+    display: block;
+    margin: 50px 0;
+    line-height: 30px;
+  } 
+  nav ul.links li a{
+    font-size: 20px;
+  }
+  a:hover,a.active{
+    background: none;
+    color: black;
+  }
+  #check:checked ~ ul.links{
+    left: 0;
+  }
+}
+
+    </style>
+    <nav>
+      <input type="checkbox" id="check">
+      <label for="check" class="checkbtn">
+        <i class="fas fa-bars"></i>
+      </label>
+      <label class="logo">JM</label>
+      <ul class="links">
+        <li><a class="active" href="finalindex.html">Welcome</a></li>
+        <li><a href="main-timeline.html">Teaching</a></li>
+        <li><a href="research.html">Research</a></li>
+        <li><a href="mentor.html">Mentorship</a></li>
+        <li><a href="social-media.html">Digital Footprint</a></li>
+        <li class="btn"><a href="contactme.html">Contact Me</a></li>
+      </ul>
+    </nav>
+    
+  </body>
+</html>
